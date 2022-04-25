@@ -4,129 +4,209 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/style.css" />
-    <script src="js/main.js" defer></script>
     <title>PC assembly</title>
+    <script src="https://cdn.jsdelivr.net/npm/seamless-scroll-polyfill@latest/lib/bundle.min.js"></script>
+    <script src="./js/accordeon.js" defer></script>
+    <script src="./js/modal.js" defer></script>
+    <script src="./js/smoothScroll.js" defer></script>
+    <script src="./js/timer.js" defer></script>
+    <script src="./js/sendForm.js" defer></script>
+
   </head>
+
   <body>
     <header class="header">
       <div class="header__wrap">
-        <a class="header__logo" href="#">
-          <img src="img/logo.svg" alt="image: logo" />
+        <a href="#" class="header__logo">
+          <img src="img/logo.svg" alt="" />
         </a>
         <div class="header__menu">
-          <nav class="header__nav">
-            <a href="#">What we do</a>
-            <a href="#">How it works</a>
-            <a href="#">Who we are</a>
+          <nav class="header__nav block-center-horis">
+            <a href="#work">What we do</a>
+            <a href="#process">How we do</a>
+            <a href="#team">Who we are</a>
           </nav>
-          <button type="button" class="button header__button modal__button">Order now</button>
+          <button class="button header__button">Log in</button>
         </div>
       </div>
     </header>
 
-    <main class="main">
+    <main>
       <section class="main-display">
         <div class="container">
           <h1 class="main-display__header">
             Assembly gaming PC for any budget
           </h1>
-          <!-- timer is not gonna work -->
           <div class="timer main-display__timer">
-            <div class="timer__item">
-              <div class="timer__count">18</div>
+            <div class="timer__item block-center">
+              <div class="timer__count timer__days">18</div>
               <div class="timer__text">Days</div>
             </div>
-            <div class="timer__item">
-              <div class="timer__count">18</div>
+            <div class="timer__item block-center">
+              <div class="timer__count timer__hours">18</div>
               <div class="timer__text">Hours</div>
             </div>
-            <div class="timer__item">
-              <div class="timer__count">18</div>
+            <div class="timer__item block-center">
+              <div class="timer__count timer__minutes">18</div>
               <div class="timer__text">Minutes</div>
             </div>
-            <div class="timer__item">
-              <div class="timer__count">18</div>
+            <div class="timer__item block-center">
+              <div class="timer__count timer__seconds">18</div>
               <div class="timer__text">Seconds</div>
             </div>
           </div>
-          <button class="button main-display__button modal__button">Order now</button>
         </div>
         <div class="main-display__background">
-          <img src="img/comp1.jpg" alt="background" />
+          <img src="img/main-screen__bgc.jpg" alt="img: background" />
         </div>
       </section>
 
-      <section class="work">
+      <div class="course">
+        <div class="container">
+          <div class="course__wrap">
+            <div class="course-button__wrap">
+              <button class="button course__button">Order now</button>
+            </div>
+            <div class="course__counter">
+              <div class="course__counter-line">
+                <span>Total ordered for last month:</span>
+                <span class="course__number">200</span>
+              </div>
+              <div class="course__counter-line">
+                <span>Already assembled:</span>
+                <span class="course__number">190</span>
+              </div>
+            </div>
+            <div class="course__progress">
+              <div class="course__progress-label">
+                <span>Total saved:</span>
+                <span class="course__number">400 000$</span>
+              </div>
+              <div class="course__progress-element">
+                <progress min="0" max="1000000" value="400000" />
+              </div>
+              <div class="course__progress-minmax">
+                <span>0$</span>
+                <span>1 000 000$</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section class="work" id="work">
         <div class="container">
           <div class="work__wrap">
             <div class="work__img">
-              <img src="img/comp2.jpg" alt="img:comp" />
+              <img src="img/work__img.png" alt="" />
             </div>
             <div class="work__text">
               <h2 class="work__header">What we do</h2>
-              <p class="work__description">
+              <div class="work__description">
                 We help you save up to 40% of the cost of a gaming computer
                 without losing performance. We select powerful computer parts,
                 order from our suppliers or directly from manufacturers to save
                 you money. We assemble a powerful computer on which you can play
                 any modern games and do work.
-              </p>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="process">
+      <section class="process" id="process">
         <div class="container">
           <div class="process__wrap">
-            <div class="process__title">
+            <div class="process__title block-center-horis">
               <div class="process__img">
-                <img src="img/2-3eclipse.svg" alt="img: eclipse" />
+                <img src="img/process-img.svg" alt="" />
               </div>
               <h2 class="process__header">How it works</h2>
             </div>
-            <div class="process__descriptin">
-              Explain in detail about how the assembly takes place from the
-              application to the issuance of your order
+            <div class="process__description">
+              Explain in detail about how the assembly takes place from the application to the issuance of your order
             </div>
             <div class="process__columns">
               <div class="process__item">
-                <h3 class="process__work">Order</h3>
-                <p class="process__text">
-                  We receive your order, contact you to clarify the details in
-                  order to understand your expectations from the future
-                  computer.
-                </p>
+                <div class="process__work">Order</div>
+                <div class="process__text">
+                  We receive your order, contact you to clarify the details in order to understand your expectations from the future computer. 
+                </div>
               </div>
               <div class="process__item">
-                <h3 class="process__work">Selection</h3>
-                <p class="process__text">
-                  After payment, we select components that will give maximum
-                  performance. We order directly from suppliers.
-                </p>
+                <div class="process__work">Selection</div>
+                <div class="process__text">
+                  After payment, we select components that will give maximum performance. We order directly from suppliers. 
+                </div>
               </div>
               <div class="process__item">
-                <h3 class="process__work">Assembly</h3>
-                <p class="process__text">
-                  We assemble the computer, carry out initial diagnostics,
-                  install the operating system and the necessary drivers for
-                  work.
-                </p>
+                <div class="process__work">Assembly</div>
+                <div class="process__text">
+                  We assemble the computer, carry out initial diagnostics, install the operating system and the necessary drivers for work. 
+                </div>
               </div>
               <div class="process__item">
-                <h3 class="process__work">Delivery</h3>
-                <p class="process__text">
-                  We return the computer to you at the appointed time, conduct
-                  testing together, sign documents on the performance of work
-                  and guarantees.
+                <div class="process__work">Delivery</div>
+                <div class="process__text">
+                  We return the computer to you at the appointed time, conduct testing together, sign documents on the performance of work and guarantees. 
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="program">
+        <div class="container">
+          <div class="program__image">
+            <img src="./img/program.svg" alt="" />
+          </div>
+          <h2 class="program__header">The process</h2>
+          <p class="program__description">
+            You can save up to 90% assembling by own compare to completed build in stores
+          </p>
+          <div class="program__content">
+            <div class="program-line">
+              <div class="program-line__content">
+                <h3 class="program-line__title">Step 1</h3>
+                <p class="program-line__descr active">
+                  Fill out a form and leave your wishes with our assistant
+                </p>
+              </div>
+              <div class="program-line__content">
+                <h3 class="program-line__title">Step 2</h3>
+                <p class="program-line__descr">
+                  Choose with your assistant the best parts by your special needs
+                </p>
+              </div>
+            </div>
+            <div class="program-line">
+              <div class="program-line__content">
+                <h3 class="program-line__title">Step 3</h3>
+                <p class="program-line__descr">
+                  Complete your order and make a payment
+                </p>
+              </div>
+              <div class="program-line__content">
+                <h3 class="program-line__title">Step 4</h3>
+                <p class="program-line__descr">
+                  Wait for delivery (usualy takes 3-4 business days)
+                </p>
+              </div>
+            </div>
+            <div class="program-line">
+              <div class="program-line__content">
+                <h3 class="program-line__title">Step 5</h3>
+                <p class="program-line__descr">
+                  Learn a study material to best performance of your PC
+                </p>
+              </div>
+              <div class="program-line__content">
+                <h3 class="program-line__title">Step 6</h3>
+                <p class="program-line__descr">
+                  Enjoy your custom build wich your built yourself
                 </p>
               </div>
             </div>
@@ -134,38 +214,38 @@
         </div>
       </section>
 
-      <section class="team">
+      <section class="command" id="team">
         <div class="container">
-          <div class="process__title team__title">
-            <div class="process__img">
-              <img src="img/2-3eclipse.svg" alt="img: eclipse" />
+          <div class="process__title command__title">
+            <div class="process__img command__img-title">
+              <img src="img/comand.svg" alt="" />
             </div>
-            <h2 class="process__header team__header">Our team</h2>
+            <h2 class="process__header">Our team</h2>
           </div>
-          <div class="team__wrap">
-            <div class="team__item">
-              <div class="team__img">
-                <img src="img/pic1.png" alt="pic:photo" />
+          <div class="command__wrap">
+            <div class="command__item block-center-horis">
+              <div class="command__img">
+                <img src="img/com-1.png" alt="img: pic" />
               </div>
-              <h3 class="team__name">Eugen Petrov</h3>
-              <div class="team__professional">Video graphics expert</div>
-              <a href="#" class="button team__link">Bio</a>
+              <h3 class="command__name">Eugen Petrov</h3>
+              <div class="command__profession">Video graphics expert</div>
+              <button class="button command__button">Bio</button>
             </div>
-            <div class="team__item">
-              <div class="team__img">
-                <img src="img/pic2.png" alt="pic:photo" />
+            <div class="command__item block-center-horis">
+              <div class="command__img">
+                <img src="img/com-2.png" alt="img: pic" />
               </div>
-              <h3 class="team__name">Alex Kozloff</h3>
-              <div class="team__professional">Video graphics expert</div>
-              <a href="#" class="button team__link">Bio</a>
+              <h3 class="command__name">Alex Kozloff</h3>
+              <div class="command__profession">Video graphics expert</div>
+              <button class="button command__button">Bio</button>
             </div>
-            <div class="team__item">
-              <div class="team__img">
-                <img src="img/pic3.png" alt="pic:photo" />
+            <div class="command__item block-center-horis">
+              <div class="command__img">
+                <img src="img/com-3.png" alt="img: pic" />
               </div>
-              <h3 class="team__name">Dmitrius Ivanus</h3>
-              <div class="team__professional">Video graphics expert</div>
-              <a href="#" class="button team__link">Bio</a>
+              <h3 class="command__name">Dmitrius Ivanus</h3>
+              <div class="command__profession">Video graphics expert</div>
+              <button class="button command__button">Bio</button>
             </div>
           </div>
         </div>
@@ -173,46 +253,52 @@
 
       <section class="assembly">
         <div class="container">
-          <div class="assembly__wrap">
+          <div class="assembly__wrap block-center-horis">
             <h2 class="assembly__header">Order your own sepcification</h2>
             <div class="assembly__description">
-              We will contact you to clarify details of your needs
+              We will contact you to clarify details of your needs 
             </div>
-            <button class="button assembly__button modal__button">Order now</button>
+            <button class="button assembly__button modal__button">
+              Order now
+            </button>
             <div class="assembly__socials">
-              <div class="assembly__item">
-                <img src="img/vk.svg" alt="logo:vk"></div>
-                <div class="assembly__item"><img src="img/youtube.svg" alt="logo:youtube"></div>
-                <div class="assembly__item"> <img src="img/facebook.svg" alt="logo:facebook"></div>
-                <div class="assembly__item"><img src="img/insta.svg" alt="logo:insta"></div>
-              
+              <div class="assembly__item block-center">
+                <img src="img/vk.svg" alt="logo: vk" />
+              </div>
+              <div class="assembly__item block-center">
+                <img src="img/ytb.svg" alt="logo: youtube" />
+              </div>
+              <div class="assembly__item block-center">
+                <img src="img/fb.svg" alt="logo: facebook" />
+              </div>
+              <div class="assembly__item block-center">
+                <img src="img/inst.svg" alt="logo: insta" />
+              </div>
             </div>
           </div>
         </div>
       </section>
-
-      <form action="#" class="modal block__center">
-        <div class="modal__inner">
-          <div class="modal__close">
-            <img src="img/close.svg" alt="img:close">
-          </div>
-          <h3 class="modal__header">Order your PC</h3>
-          <div class="modal__subheader">We will contact you to discuss details</div>
-          <div class="modal__elements">
-            <div class="modal__item">
-              <input type="text" class="modal__input" placeholder="Your name">
-            </div>
-            <div class="modal__item">
-              <input type="tel" class="modal__input" placeholder="Your number">
-            </div>
-            <div class="modal__item">
-              <input type="email" class="modal__input" placeholder="Your email">
-            </div>
-           
-          </div>
-          <button type='submit' class="button main-display__button">Send request</button>
-        </div>
-      </form>
     </main>
+
+    <form action="#" class="modal block-center">
+      <div class="modal__inner">
+        <div class="modal__header">Order your PC</div>
+        <div class="modal__subheader">
+          We will contact you to clarify details of your needs 
+        </div>
+        <div class="modal__elements block-center-horis">
+          <div class="modal__input">
+            <input type="text" class="modal__input" placeholder="your name" />
+          </div>
+          <div class="modal__input">
+            <input type="tel" class="modal__input" placeholder="phone number"/>
+          </div>
+          <div class="modal__input">
+            <input type="email" class="modal__input"placeholder="email" />
+          </div>
+          <button type="submit" class="button modal__button">Send</button>
+        </div>
+      </div>
+    </form>
   </body>
 </html>
